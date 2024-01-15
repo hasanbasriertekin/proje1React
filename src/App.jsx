@@ -161,7 +161,12 @@ const App = () => {
       <Row>
         <Col>
           {/* Konfeti */}
-          <Confetti active={confetti} config={{ spread: 360 }} />
+          <Confetti
+        width={window.innerWidth}
+        height={window.innerHeight}
+        numberOfPieces={confetti ? 300 : 0}
+        recycle={false}
+      />
         </Col>
       </Row>
     </Container>
