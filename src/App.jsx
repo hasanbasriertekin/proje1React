@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button, Table, Alert } from 'react-bootstrap';
-import Confetti from 'react-dom-confetti';
+import { useState } from 'react'
+import { Form, Table, Button, Container, Row, Col, Alert } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Confetti from 'react-confetti';
+import "../node_modules/react-bootstrap";
+
+
 
 
 const App = () => {
@@ -40,6 +44,8 @@ const App = () => {
 
     // Form gönderildiğinde konfeti patlat
     setConfetti(true);
+
+   
   };
 
   const handleBuyClick = (productId) => {
@@ -107,7 +113,7 @@ const App = () => {
                 ))}
               </Form.Control>
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="success" type="submit" className='my-3 px-5'>
               Ekle
             </Button>
           </Form>
